@@ -1,0 +1,74 @@
+param:        i:
+                    b     pmin pmax  :=
+              g1    50.1  80   200  
+              g2    11.0  120  320  
+              g3    50.0  80   280 ;
+
+
+set lines :=
+          b1 b4
+          b2 b8
+          b3 b6
+          b4 b5
+          b4 b9
+          b5 b6
+          b6 b7
+          b7 b8
+          b8 b9
+          b4 b1
+          b8 b2
+          b6 b3
+          b5 b4
+          b9 b4
+          b6 b5 
+          b7 b6
+          b8 b7
+          b9 b8
+          ;
+
+
+set GBconnect :=
+g1 b1
+g2 b2
+g3 b3
+;
+
+
+param:      bus:
+                 Pd  :=
+              
+              b1 0 
+              b2 0 
+              b3 0 
+              b4 0 
+              b5 300
+              b6 0 
+              b7 300 
+              b8 0 
+              b9 250 ;
+              
+param:    lines:
+                 branchX   branchLim :=
+         
+          b1 b4  0.115   250
+          b2 b7  0.125   250
+          b3 b9  0.117   250
+          b4 b5  0.144   250
+          b4 b6  0.202   250
+          b5 b7  0.322   250
+          b6 b9  0.340   250 
+          b7 b8  0.170   250 
+          b8 b9  0.184   250
+          b4 b1  0.115   250
+          b7 b2  0.125   250
+          b9 b3  0.117   250
+          b5 b4  0.144   250
+          b6 b4  0.202   250
+          b7 b5  0.322   250
+          b9 b6  0.340   250 
+          b8 b7  0.170   250 
+          b9 b8  0.184   250 ;
+
+
+
+param sbase := 100;
